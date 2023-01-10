@@ -1,7 +1,7 @@
 # homebrew-tap
 Homebrew Formulae to @score-spec binaries.
 
-(Not yet implemented)
+For more information, see the the [install methods](https://docs.score.dev/docs/get-started/install/).
 
 ```sh
 brew install score-spec/tap/score-compose
