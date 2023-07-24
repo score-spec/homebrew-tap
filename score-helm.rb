@@ -5,20 +5,20 @@
 class ScoreHelm < Formula
   desc ""
   homepage "https://score.dev"
-  version "0.2.1"
+  version "0.6.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/score-spec/score-helm/releases/download/0.2.1/score-helm_0.2.1_darwin_arm64.tar.gz"
-      sha256 "72d43fceb7ba34a65cb494f2535003f50b03b238d08f2bffef651ebf5263fcd4"
+    if Hardware::CPU.intel?
+      url "https://github.com/score-spec/score-helm/releases/download/0.6.0/score-helm_0.6.0_darwin_amd64.tar.gz"
+      sha256 "4e4cd1ea9f8a108dd50c754d9bc341cfeee54c827b69b795b07f9ff13e93744c"
 
       def install
         bin.install "score-helm"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/score-spec/score-helm/releases/download/0.2.1/score-helm_0.2.1_darwin_amd64.tar.gz"
-      sha256 "69d17970973974a3fbd9826257223367dc1d1f01f9fe4c68ccc55bc5e22eaa31"
+    if Hardware::CPU.arm?
+      url "https://github.com/score-spec/score-helm/releases/download/0.6.0/score-helm_0.6.0_darwin_arm64.tar.gz"
+      sha256 "e2517028152a9f72cba8dbf8f6a31ebb0c27d2cc06ec89d3d1fa4c1fc0fa38ca"
 
       def install
         bin.install "score-helm"
@@ -28,16 +28,16 @@ class ScoreHelm < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/score-spec/score-helm/releases/download/0.2.1/score-helm_0.2.1_linux_arm64.tar.gz"
-      sha256 "5e114c8de831ff9bd3d477c463df3ad58720fa54e6822051e25d5caa4d2cec34"
+      url "https://github.com/score-spec/score-helm/releases/download/0.6.0/score-helm_0.6.0_linux_arm64.tar.gz"
+      sha256 "4666e8318ae34bf2ed9713d2b701f2b9f23b746329f42b1e78ef372aa63358fd"
 
       def install
         bin.install "score-helm"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/score-spec/score-helm/releases/download/0.2.1/score-helm_0.2.1_linux_amd64.tar.gz"
-      sha256 "4bb05d7254c0287286905d2685a5b4c75562531f9be83378dee7f439f506910d"
+      url "https://github.com/score-spec/score-helm/releases/download/0.6.0/score-helm_0.6.0_linux_amd64.tar.gz"
+      sha256 "26c27bf548efa818cb46beec6f453d15d5c392a5cf4d9160eee4e927678f926e"
 
       def install
         bin.install "score-helm"
