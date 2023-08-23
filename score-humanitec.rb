@@ -5,20 +5,20 @@
 class ScoreHumanitec < Formula
   desc ""
   homepage "https://score.dev"
-  version "0.6.0"
+  version "0.7.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/score-spec/score-humanitec/releases/download/0.6.0/score-humanitec_0.6.0_darwin_amd64.tar.gz"
-      sha256 "f065c05238050746dd29a5dabfe652482130d47094b44a73f3d43a6b83b07d32"
+      url "https://github.com/score-spec/score-humanitec/releases/download/0.7.0/score-humanitec_0.7.0_darwin_amd64.tar.gz"
+      sha256 "ea1e4e6c6bfd5ff5c4eaeeb033c561ccd44b1141d3aa121a800b545df410348d"
 
       def install
         bin.install "score-humanitec"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/score-spec/score-humanitec/releases/download/0.6.0/score-humanitec_0.6.0_darwin_arm64.tar.gz"
-      sha256 "1c4c574e33cbb3d0ef7ce198c64d9d56a51cb484bfd3cbab5d2b90c130739a2c"
+      url "https://github.com/score-spec/score-humanitec/releases/download/0.7.0/score-humanitec_0.7.0_darwin_arm64.tar.gz"
+      sha256 "33be8d2c37746a77bc0c518f2f95e28372b0c8950e510938634624233c228e11"
 
       def install
         bin.install "score-humanitec"
@@ -27,17 +27,17 @@ class ScoreHumanitec < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/score-spec/score-humanitec/releases/download/0.6.0/score-humanitec_0.6.0_linux_arm64.tar.gz"
-      sha256 "da1841985f9252f2e3264a2e55e9b0ca52091b59c87ebf3364c125712a3d5867"
+    if Hardware::CPU.intel?
+      url "https://github.com/score-spec/score-humanitec/releases/download/0.7.0/score-humanitec_0.7.0_linux_amd64.tar.gz"
+      sha256 "d73aa4470e9cd991807add68aa9bed0472aff49e2966c0db4898767610b1ca9c"
 
       def install
         bin.install "score-humanitec"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/score-spec/score-humanitec/releases/download/0.6.0/score-humanitec_0.6.0_linux_amd64.tar.gz"
-      sha256 "2f72e1daed7289c1e712e0a3bf3379d576914137d61054d2a63f7c50e9bdda35"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/score-spec/score-humanitec/releases/download/0.7.0/score-humanitec_0.7.0_linux_arm64.tar.gz"
+      sha256 "2dee7264d3a36d579857df750a12db331ce33b37a5d03a6832e027de14caf834"
 
       def install
         bin.install "score-humanitec"
