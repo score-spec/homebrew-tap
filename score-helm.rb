@@ -5,20 +5,20 @@
 class ScoreHelm < Formula
   desc ""
   homepage "https://score.dev"
-  version "0.6.0"
+  version "0.8.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/score-spec/score-helm/releases/download/0.6.0/score-helm_0.6.0_darwin_amd64.tar.gz"
-      sha256 "4e4cd1ea9f8a108dd50c754d9bc341cfeee54c827b69b795b07f9ff13e93744c"
+      url "https://github.com/score-spec/score-helm/releases/download/0.8.0/score-helm_0.8.0_darwin_amd64.tar.gz"
+      sha256 "103684c7aeeac7931fb40c24125ca75e5cf492206e770714df9d3b491afeccf7"
 
       def install
         bin.install "score-helm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/score-spec/score-helm/releases/download/0.6.0/score-helm_0.6.0_darwin_arm64.tar.gz"
-      sha256 "e2517028152a9f72cba8dbf8f6a31ebb0c27d2cc06ec89d3d1fa4c1fc0fa38ca"
+      url "https://github.com/score-spec/score-helm/releases/download/0.8.0/score-helm_0.8.0_darwin_arm64.tar.gz"
+      sha256 "d1f138662a99b293f91d60d8ed3ace09f7603d705d545c51856223c688653cfd"
 
       def install
         bin.install "score-helm"
@@ -28,16 +28,16 @@ class ScoreHelm < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/score-spec/score-helm/releases/download/0.6.0/score-helm_0.6.0_linux_arm64.tar.gz"
-      sha256 "4666e8318ae34bf2ed9713d2b701f2b9f23b746329f42b1e78ef372aa63358fd"
+      url "https://github.com/score-spec/score-helm/releases/download/0.8.0/score-helm_0.8.0_linux_arm64.tar.gz"
+      sha256 "93671b655587d40ee858505e8ee918686de766244a5eae9e9958287cb66f1e89"
 
       def install
         bin.install "score-helm"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/score-spec/score-helm/releases/download/0.6.0/score-helm_0.6.0_linux_amd64.tar.gz"
-      sha256 "26c27bf548efa818cb46beec6f453d15d5c392a5cf4d9160eee4e927678f926e"
+      url "https://github.com/score-spec/score-helm/releases/download/0.8.0/score-helm_0.8.0_linux_amd64.tar.gz"
+      sha256 "7b25ac6ceb23face41a3482411a157959e5245b5a7b969a78f19b09cd637e041"
 
       def install
         bin.install "score-helm"
