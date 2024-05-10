@@ -5,20 +5,20 @@
 class ScoreHumanitec < Formula
   desc ""
   homepage "https://score.dev"
-  version "0.10.2"
+  version "0.10.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/score-spec/score-humanitec/releases/download/0.10.2/score-humanitec_0.10.2_darwin_arm64.tar.gz"
-      sha256 "780a8bf7eb194dcf22c5c359802a7d01a584fa87f67f82ea3ceb557fab1d92c7"
+    if Hardware::CPU.intel?
+      url "https://github.com/score-spec/score-humanitec/releases/download/0.10.3/score-humanitec_0.10.3_darwin_amd64.tar.gz"
+      sha256 "4de1e2aec0fe4cef185cbf0a9935bbc160fba87035a84f1e50b9e99c2fde21e1"
 
       def install
         bin.install "score-humanitec"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/score-spec/score-humanitec/releases/download/0.10.2/score-humanitec_0.10.2_darwin_amd64.tar.gz"
-      sha256 "c039c8e5ecce83a4607f8d044dd39d4f384cf5a8a88c725be1e20ab0de18e184"
+    if Hardware::CPU.arm?
+      url "https://github.com/score-spec/score-humanitec/releases/download/0.10.3/score-humanitec_0.10.3_darwin_arm64.tar.gz"
+      sha256 "b29d6db1999a5a0096b065f0617ee2282ed7ad958dbe4af5fe7dab789286daf7"
 
       def install
         bin.install "score-humanitec"
@@ -27,21 +27,23 @@ class ScoreHumanitec < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/score-spec/score-humanitec/releases/download/0.10.2/score-humanitec_0.10.2_linux_arm64.tar.gz"
-      sha256 "da7d36b703508e5f144f40a10b305dc553a03a452354cf99a022998fb6ce53ee"
+    if Hardware::CPU.intel?
+      url "https://github.com/score-spec/score-humanitec/releases/download/0.10.3/score-humanitec_0.10.3_linux_amd64.tar.gz"
+      sha256 "423612ab53608cda7dbc05654a320fc0eff3e829ac90e790ed4635f53095b53d"
 
       def install
         bin.install "score-humanitec"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/score-spec/score-humanitec/releases/download/0.10.2/score-humanitec_0.10.2_linux_amd64.tar.gz"
-      sha256 "b95c6578b0143f436a88ff940106cdacb7156bfa00ada123f0ad64f89a425657"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/score-spec/score-humanitec/releases/download/0.10.3/score-humanitec_0.10.3_linux_arm64.tar.gz"
+      sha256 "a8f1648f63f4c9a800cd9cf616b8530c40af178e0b6aacf2961aa44c79eaf16e"
 
       def install
         bin.install "score-humanitec"
       end
     end
   end
+
+  deprecate! date: "2024-05-08", because: "has been replaced by humctl score deploy. For more information visit https://developer.humanitec.com/platform-orchestrator/reference/cli-references/#score-integration."
 end
