@@ -5,6 +5,7 @@ For more information, see the the [install methods](https://docs.score.dev/docs/
 
 ```sh
 brew install score-spec/tap/score-compose
+brew install score-spec/tap/score-k8s
 brew install score-spec/tap/score-helm
 brew install score-spec/tap/score-humanitec
 ```
