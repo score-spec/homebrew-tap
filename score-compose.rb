@@ -5,20 +5,20 @@
 class ScoreCompose < Formula
   desc ""
   homepage "https://score.dev"
-  version "0.14.1"
+  version "0.15.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/score-spec/score-compose/releases/download/0.14.1/score-compose_0.14.1_darwin_amd64.tar.gz"
-      sha256 "6d279ff98b4fb9f52dbf6d3250f57b3898ddb326aab26b2f36b90a2862036261"
+    on_intel do
+      url "https://github.com/score-spec/score-compose/releases/download/0.15.0/score-compose_0.15.0_darwin_amd64.tar.gz"
+      sha256 "602ae9b31269e328a0f72b4588194a03af625b50e90b9090da9c04a5fbda2eba"
 
       def install
         bin.install "score-compose"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/score-spec/score-compose/releases/download/0.14.1/score-compose_0.14.1_darwin_arm64.tar.gz"
-      sha256 "8d801e933dbdf68027b3f6f8dee1e00b09c9560079383e616ffe55f3daacaf2e"
+    on_arm do
+      url "https://github.com/score-spec/score-compose/releases/download/0.15.0/score-compose_0.15.0_darwin_arm64.tar.gz"
+      sha256 "457d99a00245d9dbea218b90ea0309d5544befb63be023aa4884701522283dbc"
 
       def install
         bin.install "score-compose"
@@ -27,20 +27,24 @@ class ScoreCompose < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/score-spec/score-compose/releases/download/0.14.1/score-compose_0.14.1_linux_amd64.tar.gz"
-      sha256 "3106eb30290ee92e33ae592d8bc408506f7ab884d32fe33f9b51757edee3c5ba"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/score-spec/score-compose/releases/download/0.15.0/score-compose_0.15.0_linux_amd64.tar.gz"
+        sha256 "d3e59dad74430e82d3045dcee979591ff3524b9717661cc86b4de451804c739c"
 
-      def install
-        bin.install "score-compose"
+        def install
+          bin.install "score-compose"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/score-spec/score-compose/releases/download/0.14.1/score-compose_0.14.1_linux_arm64.tar.gz"
-      sha256 "389d3ce8db6941aabcf1c2e1f455c4cee24aa4b1215d3d148c920d92a7728c39"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/score-spec/score-compose/releases/download/0.15.0/score-compose_0.15.0_linux_arm64.tar.gz"
+        sha256 "902cb0a4f554aa47741abca2ea9286a03651b74135a17dd6951526bdc2739688"
 
-      def install
-        bin.install "score-compose"
+        def install
+          bin.install "score-compose"
+        end
       end
     end
   end
