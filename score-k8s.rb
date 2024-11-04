@@ -5,20 +5,20 @@
 class ScoreK8s < Formula
   desc ""
   homepage "https://score.dev"
-  version "0.1.14"
+  version "0.1.15"
 
   on_macos do
     on_intel do
-      url "https://github.com/score-spec/score-k8s/releases/download/0.1.14/score-k8s_0.1.14_darwin_amd64.tar.gz"
-      sha256 "2cca944c78adb52e0b7af8b24d1947638f5aa866055b6e1123f63150b0a2b692"
+      url "https://github.com/score-spec/score-k8s/releases/download/0.1.15/score-k8s_0.1.15_darwin_amd64.tar.gz"
+      sha256 "43078c67556c243cf5324ef637d8d2deca3a9cef2446dc4ac63b357a4facfc29"
 
       def install
         bin.install "score-k8s"
       end
     end
     on_arm do
-      url "https://github.com/score-spec/score-k8s/releases/download/0.1.14/score-k8s_0.1.14_darwin_arm64.tar.gz"
-      sha256 "d533f2127f000ac396372ea448f41847d0dba7c1b7834ad22b3847a22ef2e7ce"
+      url "https://github.com/score-spec/score-k8s/releases/download/0.1.15/score-k8s_0.1.15_darwin_arm64.tar.gz"
+      sha256 "066221a2e13c6fe9b07520f5a8e2d767776541842f913e5a90c160e45ffe23e7"
 
       def install
         bin.install "score-k8s"
@@ -29,8 +29,8 @@ class ScoreK8s < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/score-spec/score-k8s/releases/download/0.1.14/score-k8s_0.1.14_linux_amd64.tar.gz"
-        sha256 "fa5422915f8efadda0e26f9a90dbb53b68f72379bf32f5f06dd0c779a6a597fa"
+        url "https://github.com/score-spec/score-k8s/releases/download/0.1.15/score-k8s_0.1.15_linux_amd64.tar.gz"
+        sha256 "bfce7dfc57847a5097378d79b313f41dd63769cc50eaaa9c164e0d633c25a771"
 
         def install
           bin.install "score-k8s"
@@ -39,8 +39,8 @@ class ScoreK8s < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/score-spec/score-k8s/releases/download/0.1.14/score-k8s_0.1.14_linux_arm64.tar.gz"
-        sha256 "75440be5a99a531c7e3cf1a758197f4646cff6661cda58c453b4395376c1986b"
+        url "https://github.com/score-spec/score-k8s/releases/download/0.1.15/score-k8s_0.1.15_linux_arm64.tar.gz"
+        sha256 "d0f5f1da2d26eb722ba19381df4327569ed73f04a4cf56aa6c4c1151c6fb94e1"
 
         def install
           bin.install "score-k8s"
