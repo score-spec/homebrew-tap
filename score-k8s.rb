@@ -5,20 +5,20 @@
 class ScoreK8s < Formula
   desc ""
   homepage "https://score.dev"
-  version "0.8.0"
+  version "0.8.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/score-spec/score-k8s/releases/download/0.8.0/score-k8s_0.8.0_darwin_amd64.tar.gz"
-      sha256 "828566bd89d3611ebb4caa3f60d0a2c853dadc78ce179bf8d09c357b93064283"
+      url "https://github.com/score-spec/score-k8s/releases/download/0.8.1/score-k8s_0.8.1_darwin_amd64.tar.gz"
+      sha256 "c04a2d5216ea93a9b5fb55f3ac2069a83126346c9fb54e0b7eca8ebb66763f90"
 
       def install
         bin.install "score-k8s"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/score-spec/score-k8s/releases/download/0.8.0/score-k8s_0.8.0_darwin_arm64.tar.gz"
-      sha256 "746fee2041bb60b902a96608e960e7e66b9e5ed59010c0599f870c78f6d8539a"
+      url "https://github.com/score-spec/score-k8s/releases/download/0.8.1/score-k8s_0.8.1_darwin_arm64.tar.gz"
+      sha256 "a11391c884a7d7b41147cfc8d9ecc9ed79255caf7a321b2227c77d967e5cd602"
 
       def install
         bin.install "score-k8s"
@@ -28,15 +28,15 @@ class ScoreK8s < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/score-spec/score-k8s/releases/download/0.8.0/score-k8s_0.8.0_linux_amd64.tar.gz"
-      sha256 "6dfe953c7250c9ea71709d5ea5f5334352c4b82b691293d02fc40c7d894bb119"
+      url "https://github.com/score-spec/score-k8s/releases/download/0.8.1/score-k8s_0.8.1_linux_amd64.tar.gz"
+      sha256 "4876bf513e47818874fad332156819ded869d06c50e659876bdedd21bcf106a3"
       def install
         bin.install "score-k8s"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/score-spec/score-k8s/releases/download/0.8.0/score-k8s_0.8.0_linux_arm64.tar.gz"
-      sha256 "8917a9fa244f4f2329fed4f8feee0015c7256d2462c074861b7053cb17273190"
+      url "https://github.com/score-spec/score-k8s/releases/download/0.8.1/score-k8s_0.8.1_linux_arm64.tar.gz"
+      sha256 "2dbee113e2ad6df90896f842b25bb11a4d17604f3666c08248a4d988e4eb8f0a"
       def install
         bin.install "score-k8s"
       end
