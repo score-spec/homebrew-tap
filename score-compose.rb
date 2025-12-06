@@ -10,7 +10,7 @@ class ScoreCompose < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/score-spec/score-compose/releases/download/0.29.11/score-compose_0.29.11_darwin_amd64.tar.gz"
-      sha256 "634be32d01b9e9417dff131d9d0e7d1a3cd7edf7ae124f0b1db16cdbfe3a4b22"
+      sha256 "55ec1b8ce2891176e3a1c967600667fbe422e2dd0149028b527e251087f92626"
 
       def install
         bin.install "score-compose"
@@ -18,7 +18,7 @@ class ScoreCompose < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/score-spec/score-compose/releases/download/0.29.11/score-compose_0.29.11_darwin_arm64.tar.gz"
-      sha256 "bcbd48e4cbfb4840a8311c1d685f2b2b930c5360f107823a280195b8a7f4964b"
+      sha256 "466ac3df5739e322a67b692e1b75d618e25e0a3346126001f565873356f05642"
 
       def install
         bin.install "score-compose"
@@ -29,14 +29,14 @@ class ScoreCompose < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/score-spec/score-compose/releases/download/0.29.11/score-compose_0.29.11_linux_amd64.tar.gz"
-      sha256 "a2fe6d41df2561614f9d3e696bf04d8336fc606aaaa9cc570b9dfdf8c5023aee"
+      sha256 "646c40b28d04205e2b407441144762970a889b6a97141e07e47a920d95f236ff"
       def install
         bin.install "score-compose"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/score-spec/score-compose/releases/download/0.29.11/score-compose_0.29.11_linux_arm64.tar.gz"
-      sha256 "35400b69ef63d6a9bc3358dcccc3a575519fd36f379362b4550e8084f80204b6"
+      sha256 "e79061a1ec2715e2d368afe904337b74191f71fbae10b616d99bc3edea5f16a6"
       def install
         bin.install "score-compose"
       end
