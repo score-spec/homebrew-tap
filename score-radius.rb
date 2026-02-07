@@ -5,20 +5,20 @@
 class ScoreRadius < Formula
   desc ""
   homepage "https://score.dev"
-  version "0.0.5"
+  version "0.0.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/score-spec/score-radius/releases/download/v0.0.5/score-radius_0.0.5_darwin_amd64.tar.gz"
-      sha256 "e834851ed0070543c7eba57af94fa0d398769b04d07c6c8728fcc547a169bd2e"
+      url "https://github.com/score-spec/score-radius/releases/download/v0.0.6/score-radius_0.0.6_darwin_amd64.tar.gz"
+      sha256 "7680a48ce8231139ca455808add3d19c5f6bf517cbef274558abe093721e8f59"
 
       def install
         bin.install "score-radius"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/score-spec/score-radius/releases/download/v0.0.5/score-radius_0.0.5_darwin_arm64.tar.gz"
-      sha256 "dfbf19666c05859f732ff3e67187b998398da84709be0e2ca0a50038f37ccca3"
+      url "https://github.com/score-spec/score-radius/releases/download/v0.0.6/score-radius_0.0.6_darwin_arm64.tar.gz"
+      sha256 "8e63fd90b77cc99062d767d2f4991f67b46953a734d6d472dee0b687ff9af631"
 
       def install
         bin.install "score-radius"
@@ -28,15 +28,15 @@ class ScoreRadius < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/score-spec/score-radius/releases/download/v0.0.5/score-radius_0.0.5_linux_amd64.tar.gz"
-      sha256 "a5da30fb9877332a6c04e1925dd189b9572f292c2244768a3d762fbfd4239e35"
+      url "https://github.com/score-spec/score-radius/releases/download/v0.0.6/score-radius_0.0.6_linux_amd64.tar.gz"
+      sha256 "292a85b02b2d90ff9c7f4fafbc650de511389dfae79ef1b2916426f5a6ac907e"
       def install
         bin.install "score-radius"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/score-spec/score-radius/releases/download/v0.0.5/score-radius_0.0.5_linux_arm64.tar.gz"
-      sha256 "f764236b4802b509d39e9b99f6a49eaacd1653bcb967ed8d252a15d03f1deef3"
+      url "https://github.com/score-spec/score-radius/releases/download/v0.0.6/score-radius_0.0.6_linux_arm64.tar.gz"
+      sha256 "af545943c15d0888afa4c7a6108d567e77198538cc765eba06539fc6d8608627"
       def install
         bin.install "score-radius"
       end
