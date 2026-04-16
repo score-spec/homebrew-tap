@@ -5,20 +5,20 @@
 class ScoreHelm < Formula
   desc ""
   homepage "https://score.dev"
-  version "0.10.1"
+  version "0.10.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/score-spec/score-helm/releases/download/v0.10.1/score-helm_0.10.1_darwin_amd64.tar.gz"
-      sha256 "400e99114409148889a9f0671fd1b19dc40ca2c537027d12eb3c8c15721adb41"
+      url "https://github.com/score-spec/score-helm/releases/download/v0.10.2/score-helm_0.10.2_darwin_amd64.tar.gz"
+      sha256 "33efede09516ed4cb36ecabc0bf35188d7b1dc94af3b1cefe253145ffa8cfb62"
 
       define_method(:install) do
         bin.install "score-helm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/score-spec/score-helm/releases/download/v0.10.1/score-helm_0.10.1_darwin_arm64.tar.gz"
-      sha256 "aff56f9f2b3c97f624ea2c76479b9acdb9b553e3e21f002beea558bffc8209d0"
+      url "https://github.com/score-spec/score-helm/releases/download/v0.10.2/score-helm_0.10.2_darwin_arm64.tar.gz"
+      sha256 "fa2912de6bf315a650faa44b6156504b487c45822903cc40cfd910382991a54f"
 
       define_method(:install) do
         bin.install "score-helm"
@@ -28,15 +28,15 @@ class ScoreHelm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/score-spec/score-helm/releases/download/v0.10.1/score-helm_0.10.1_linux_amd64.tar.gz"
-      sha256 "df08aa21c4bee19cdde74811c7870caaaab320210d6484592d03b5a3dfafa78b"
+      url "https://github.com/score-spec/score-helm/releases/download/v0.10.2/score-helm_0.10.2_linux_amd64.tar.gz"
+      sha256 "892171c86d8ad64bfa52a1e7166cdc27859444098f8c0be5700050c2798bec3f"
       define_method(:install) do
         bin.install "score-helm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/score-spec/score-helm/releases/download/v0.10.1/score-helm_0.10.1_linux_arm64.tar.gz"
-      sha256 "e0994286b82bde526487c922e0a62b6c79b54d2dea0aef2f1edb55fa9305025f"
+      url "https://github.com/score-spec/score-helm/releases/download/v0.10.2/score-helm_0.10.2_linux_arm64.tar.gz"
+      sha256 "112b4bfeabee75494e2a20a99b50a71119282745b1c8ec9a376ac18ea641ba81"
       define_method(:install) do
         bin.install "score-helm"
       end
