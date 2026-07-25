@@ -5,20 +5,20 @@
 class ScoreRadius < Formula
   desc ""
   homepage "https://score.dev"
-  version "0.0.14"
+  version "0.0.15"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/score-spec/score-radius/releases/download/v0.0.14/score-radius_0.0.14_darwin_amd64.tar.gz"
-      sha256 "32c0afb1c5d5b45f3aa06c6ff351f64f4a16739bc6d36c33b841fa6b5210a4a0"
+      url "https://github.com/score-spec/score-radius/releases/download/v0.0.15/score-radius_0.0.15_darwin_amd64.tar.gz"
+      sha256 "8343c3444ebd784eefc7d3e21dc7045c480d0d9238593ae3fa8f05d2fe3c7c37"
 
       define_method(:install) do
         bin.install "score-radius"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/score-spec/score-radius/releases/download/v0.0.14/score-radius_0.0.14_darwin_arm64.tar.gz"
-      sha256 "a94d5f7a86860fc6510e389b50093fd1154864ce80453da06defee204e09978a"
+      url "https://github.com/score-spec/score-radius/releases/download/v0.0.15/score-radius_0.0.15_darwin_arm64.tar.gz"
+      sha256 "3e52229da9a98eea0d8201e5dc4aafcf012709a6ba8b5b64f6a777fe31494708"
 
       define_method(:install) do
         bin.install "score-radius"
@@ -28,15 +28,15 @@ class ScoreRadius < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/score-spec/score-radius/releases/download/v0.0.14/score-radius_0.0.14_linux_amd64.tar.gz"
-      sha256 "a3052b1b31cae6777846b6dccf2f898cf67daaef00d6279fa05583836e389e2b"
+      url "https://github.com/score-spec/score-radius/releases/download/v0.0.15/score-radius_0.0.15_linux_amd64.tar.gz"
+      sha256 "0c522d82c9c10816ff7d0cca6649518a165a47855eac2f34815778a5237c9afc"
       define_method(:install) do
         bin.install "score-radius"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/score-spec/score-radius/releases/download/v0.0.14/score-radius_0.0.14_linux_arm64.tar.gz"
-      sha256 "fe4982a8800d43aef0616ed1bb1cd1a4c60cda43ea52ba5220ce48e180929a2d"
+      url "https://github.com/score-spec/score-radius/releases/download/v0.0.15/score-radius_0.0.15_linux_arm64.tar.gz"
+      sha256 "6dd46a7df19abff58799af59bb442490e3eed3ebf7908c8e32baa0a6d4775cd9"
       define_method(:install) do
         bin.install "score-radius"
       end
